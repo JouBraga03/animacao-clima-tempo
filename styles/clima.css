@@ -1,0 +1,99 @@
+.wather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.wrapper-wather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    width: 760px;
+    height: 300px;
+    margin-top: 20vh;
+    animation: animation-wather-flutuando infinite 2s ease-in-out;
+}
+
+.wather-text {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    animation: animation-wather-text 3s infinite ease;
+    top: 63vh;
+}
+
+.cloud {
+    background-image: url('../pictures/cloud.png');
+    background-size: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 250px;
+}
+
+.cloud-left {
+    z-index: 3;
+    position: absolute;
+    left: 106px;
+}
+
+.cloud-right {
+    justify-content: flex-end;
+    z-index: 3;
+    position: absolute;
+    right: 110px;
+}
+
+.sun {
+    background-image: url('../pictures/sun.png');
+    background-size: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 250px;
+    justify-content: center;
+    z-index: 4;
+    position: absolute;
+    top: -30px;
+    animation: animation-sol infinite 20s linear;
+}
+
+@keyframes animation-wather-flutuando {
+    0% {
+        margin-top: 20vh;
+    }
+
+    50% {
+        margin-top: 10vh;
+    }
+
+    100% {
+        margin-top: 20vh;
+    }
+}
+
+
+@keyframes animation-sol {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+@keyframes animation-wather-text {
+    0% {
+        bottom: -1200px;
+    }
+
+    100% {
+        font-size: 62px;
+        bottom: 600px;
+    }
+}
